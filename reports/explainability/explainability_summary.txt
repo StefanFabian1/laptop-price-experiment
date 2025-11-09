@@ -1,0 +1,22 @@
+Explainability summary
+-----------------------
+Počet vzoriek (dataset): 3192
+Počet vzoriek (SHAP sample): 1000
+Veľkosť background maskera: 500
+Model: XGBoost (random_state=42)
+
+Top 10 črť podľa |SHAP| (agregované na úrovni vstupných stĺpcov):
+  - storage_gb: 0.190735
+  - screen_inches: 0.054262
+  - cpu_gen: 0.049518
+  - storage_is_ssd: 0.035714
+  - ram_gb: 0.028976
+  - rating: 0.026487
+  - cpu_threads: 0.018505
+  - cpu_physical_cores: 0.011236
+  - warranty_years: 0.002526
+  - year: 0.000222
+
+Poznámka: SHAP hodnoty sú počítané na log(cena); interpretácia vo vzťahu k pôvodnej mene vyžaduje exponentáciu.
+Grafický súbor: shap_summary.png
+Tabuľka dôležitostí: shap_feature_importance.csv

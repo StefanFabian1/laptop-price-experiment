@@ -1,0 +1,60 @@
+Experiment summary
+-------------------
+Počet záznamov (spolu): 3192
+Zdroje:
+  - primary: 917
+  - speed: 1000
+  - euro: 1275
+Najlepší model (K-fold): xgb → RMSE=23668±4825, MAPE=10.61%, R²=0.866 (95 % CI: 20043 – 27775)
+Najlepší model (time-split (cutoff year ≤ 2023) ): rf → RMSE=24918, MAPE=18.24%, R²=0.912
+Zlepšenie oproti OLS (RMSE): 17129 (42.0 %).
+
+Poradie modelov (K-fold, podľa RMSE):
+  • xgb → RMSE=23668, MAPE=10.61%, R²=0.866
+  • rf → RMSE=24974, MAPE=11.08%, R²=0.852
+  • svr → RMSE=27494, MAPE=13.05%, R²=0.821
+  • ols → RMSE=40797, MAPE=26.79%, R²=0.586
+  • ridge → RMSE=43992, MAPE=24.67%, R²=0.489
+  • lasso → RMSE=46795, MAPE=26.25%, R²=0.439
+
+Poradie modelov (time-split, podľa RMSE):
+  • rf → RMSE=24918, MAPE=18.24%, R²=0.912
+  • xgb → RMSE=33962, MAPE=18.30%, R²=0.836
+  • svr → RMSE=38170, MAPE=32.37%, R²=0.793
+  • ols → RMSE=40389, MAPE=28.74%, R²=0.768
+  • lasso → RMSE=64365, MAPE=24.67%, R²=0.411
+  • ridge → RMSE=91230, MAPE=28.78%, R²=-0.183
+
+Bootstrap 95 % CI (K-fold):
+  • lasso – RMSE CI: 34710 – 66789 (n=5)
+  • ols – RMSE CI: 30872 – 55627 (n=5)
+  • rf – RMSE CI: 21786 – 28163 (n=5)
+  • ridge – RMSE CI: 31594 – 64798 (n=5)
+  • svr – RMSE CI: 22490 – 32497 (n=5)
+  • xgb – RMSE CI: 20043 – 27775 (n=5)
+
+Štatistické testy (porovnanie s OLS, K-fold):
+  RMSE:
+    • lasso vs ols: Δ=5999 (vyššie), p=0.0862, d=1.01 → nesignifikantné
+    • rf vs ols: Δ=-15822 (nižšie), p=0.0583, d=-1.18 → nesignifikantné
+    • ridge vs ols: Δ=3195 (vyššie), p=0.3790, d=0.44 → nesignifikantné
+    • svr vs ols: Δ=-13303 (nižšie), p=0.0634, d=-1.14 → nesignifikantné
+    • xgb vs ols: Δ=-17129 (nižšie), p=0.0490, d=-1.25 → signifikantné
+  MAPE:
+    • lasso vs ols: Δ=-1 (nižšie), p=0.2740, d=-0.57 → nesignifikantné
+    • rf vs ols: Δ=-16 (nižšie), p=0.0000, d=-10.87 → signifikantné
+    • ridge vs ols: Δ=-2 (nižšie), p=0.0020, d=-3.20 → signifikantné
+    • svr vs ols: Δ=-14 (nižšie), p=0.0000, d=-15.28 → signifikantné
+    • xgb vs ols: Δ=-16 (nižšie), p=0.0000, d=-12.34 → signifikantné
+
+Grafy:
+  - rmse_kfold: reports/figures/rmse_kfold.png
+  - mape_kfold: reports/figures/mape_kfold.png
+  - r2_kfold: reports/figures/r2_kfold.png
+  - rmse_time_split: reports/figures/rmse_time_split.png
+  - mape_time_split: reports/figures/mape_time_split.png
+
+Poznámky:
+- Time-split validácia využíva kvantil roku (0.75); ak bolo testovacích dát málo, cutoff sa posunul na 0.6.
+- Výsledky sú v INR, log-transformácia ceny sa používala len počas tréningu; metriky sú vypočítané v pôvodnom mierke.
+- Time-split testovacia množina obsahovala 34 záznamov (rok > 2023).

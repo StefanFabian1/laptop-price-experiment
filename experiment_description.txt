@@ -1,0 +1,138 @@
+Experiment laptop-price-experiment
+==================================
+
+1. Kontext a ciele
+------------------
+Semestrálny výskum pre predmet *Experimentálne metódy v softvérovom inžinierstve* sa zameriava na porovnanie hedonického (lineárneho) modelu a moderných algoritmov strojového učenia pri predikcii cien notebookov. Jadrom je overiť, či hybridný prístup (kombinácia interpretovateľnej log-lineárnej regresie a nelineárnych modelov) znižuje chybu predikcie oproti čistej lineárnej regresii a zároveň umožňuje vysvetliť vplyv jednotlivých čŕt.
+
+2. Dataset
+----------
+- Zdroje: tri verejné datasety uložené v `src/raw/`:
+  - `laptop.csv` (Laptop Price Dataset – Suman Bera, 917 riadkov, ceny v INR).
+  - `Laptop_price.csv` (syntetický dataset s číselnými parametrami, 1 000 riadkov, ceny v INR).
+  - `laptop_price - dataset.csv` (európsky trh, 1 275 riadkov; ceny v EUR sa konvertujú na INR kurzom 1 EUR ≈ 90 INR).
+- Po zlúčení vzniká jednotný dataset so 3 192 riadkami a 14 attribútmi kompatibilnými s experimentálnou pipeline.
+- Notebook `01_eda.ipynb` pri prvom spustení automaticky skopíruje referenčný CSV z `src/raw/` do `data/raw/` a následne zlúči všetky dostupné zdroje do `data/processed/clean.csv`.
+
+3. Čistenie a transformácie
+---------------------------
+Zlúčený dataset vzniká kombináciou troch čistiacich vetiev v `src/cleaning.py`:
+- **Primárny Kaggle dataset (`laptop.csv`)** – používa pôvodnú funkciu `clean_laptop_dataframe`: odstránenie riadkov bez `Model`/`Price`, extrakcia značky z názvu modelu, parsovanie CPU/GPU/OS, normalizácia cien (odstránenie symbolov), výpočet `ram_gb`, `storage_gb`, `screen_inches`, odhad roku z názvu a doplnenie numerických hodnôt mediánom (rating, záruka, jadrá, thread-y, rok).
+- **Dataset `Laptop_price.csv`** – čisto numerické polia sa mapujú priamo (`Brand` → `brand`, `Processor_Speed` → slovný popis CPU, `RAM_Size`, `Storage_Capacity`, `Screen_Size`, `Price`). Chýbajúce kategórie (GPU, OS, typ úložiska) sa nastavujú na `unknown`.
+- **Dataset `laptop_price - dataset.csv`** – parsovanie `Memory` na celkovú kapacitu v GB a dominantný typ úložiska, spájanie `GPU_Company`/`GPU_Type`, zostavenie popisu CPU z vendoru, typu a frekvencie, a prepočet ceny z EUR na INR (1 EUR ≈ 90 INR).
+
+Po spojení všetkých zdrojov funkcia `build_combined_dataset()` doplní chýbajúce numerické črty (`rating`, `warranty_years`, `year`, `cpu_physical_cores`, `cpu_threads`) mediánom alebo nulou, aby bola pipeline kompatibilná so `StandardScaler` bez imputačných krokov. Výsledok sa ukladá do `data/processed/clean.csv` a používa vo všetkých ďalších skriptoch.
+
+4. Analýza datasetu
+-------------------
+- Zlúčený dataset má 3 192 riadkov (primary 917, speed 1 000, euro 1 275); všetky ceny sú vyjadrené v INR.
+- Najviac chýbajúcich hodnôt je v črtách `rating`, `warranty_years`, `cpu_physical_cores`, `cpu_threads` a `year` (≈71 %), preto sa dopĺňajú mediánom/0 podľa pipeline.
+- Cena notebookov v INR: priemer 71 354, medián 52 000, 90. percentil 157 410; rozpätie 8 000 – 599 990 INR.
+- Najčastejšie značky: Lenovo (695), HP (633), Dell (598), Asus (490), Acer (375), MSI (150).
+- Typ úložiska: SSD 56,6 %, `unknown` 31,3 %, HDD 11,7 %, hybrid/other <1 %.
+- Podiel CPU vendorov po feature engineeringu: Other 56,9 % (generické popisy), Intel 40,6 %, AMD 1,9 %, Apple 0,6 %.
+
+4.1 Grafické výstupy
+--------------------
+Generované grafy sú uložené v `reports/figures/`:
+- `price_distribution.png`: histogram cien v INR.
+- `price_distribution_log10.png`: histogram log10(ceny) na vizualizáciu pravostranného rozdelenia.
+- `price_by_brand.png`: boxplot porovnávajúci ceny top 10 značiek.
+- `price_vs_ram.png`: scatter graf vzťahu RAM a ceny, farebne odlíšený podľa typu úložiska.
+- `numeric_correlation_heatmap.png`: korelačná heatmapa numerických čŕt.
+- `storage_type_counts.png`: stĺpcový graf zastúpenia typov úložísk.
+- `records_by_source.png`: stĺpcový graf počtu záznamov podľa zdroja datasetu.
+- `price_by_source.png`: boxplot porovnávajúci cenové rozpätia jednotlivých zdrojov.
+
+4.2 Interpretácia kľúčových nálezov
+-----------------------------------
+- Ceny majú stále výrazne pravostranné rozdelenie; log-transformácia stabilizuje varianciu pred modelovaním.
+- Boxplot `price_by_source` ukazuje, že európsky dataset obsahuje drahšie modely, zatiaľ čo „speed“ dataset reprezentuje dostupnejšiu triedu – preto je užitočné zachovať `source` pri analýzach (aj keď ho nezahŕňame do modelu).
+- Viac ako polovica záznamov má generické popisy CPU (`cpu_vendor = Other`), čo odôvodňuje doplňujúce engineered črty (`cpu_gen`, `cpu_gpu_combo`).
+- Podiel SSD výrazne prevyšuje HDD; vysoký počet `unknown` pochádza z numerického datasetu bez informácie o type úložiska – modely preto využívajú binárny príznak `storage_is_ssd`.
+
+5. Feature engineering (`src/features.py`)
+------------------------------------------
+- `cpu_vendor`: Intel, AMD, Apple, Qualcomm, inak `Other`.
+- `cpu_gen`: heuristická extrakcia generácie/rodiny CPU (číselné suffiksy „11th“, „5600H“, „M1“ → mapované na čísla; napr. Apple M → séria 20+index).
+- `gpu_vendor`: NVIDIA, AMD, Intel, Apple, inak `Other`.
+- `cpu_gpu_combo`: kartézsky reťazec CPU/GPU vendorov.
+- `storage_is_ssd`: binárny príznak podľa hodnoty `storage_type` (SSD = 1).
+- Funkcie pracujú bezpečne s `NaN` a zachovávajú pôvodný DataFrame (kopírovanie).
+
+6. Predspracovanie a pipeline (`src/data_prep.py`)
+--------------------------------------------------
+- Použitý `ColumnTransformer`:
+  - numerické stĺpce: `ram_gb`, `storage_gb`, `screen_inches`, `rating`, `warranty_years`, `cpu_physical_cores`, `cpu_threads`, `storage_is_ssd`, `year`;
+  - kategorické stĺpce: `brand`, `cpu`, `gpu`, `os`, `storage_type`, plus odvodené `cpu_vendor`, `gpu_vendor`, `cpu_gpu_combo` po feature engineeringu.
+- Numerické atribúty škáluje `StandardScaler`, kategórie kóduje `OneHotEncoder(handle_unknown="ignore")`.
+- Pipeline je súčasťou `sklearn.pipeline.Pipeline` v notebooku `02_training.ipynb`.
+
+7. Modely (`src/modeling.py`)
+-----------------------------
+Konfigurácia modelov dostupná cez `get_models(random_state=42)`:
+- Hedonické baseline: `LinearRegression` (OLS), `RidgeCV` (automatický výber alfy po log-scale), `LassoCV`.
+- Stromové/ensemble metódy: `RandomForestRegressor` (400 stromov, `max_features` implicitný, `random_state=42`, `n_jobs=-1`).
+- Support Vector Regression: RBF kernel, `C=5`, `epsilon=0.1`.
+- Gradient boosting: `XGBRegressor` (600 stromov, `max_depth=8`, `learning_rate=0.05`, `subsample=0.8`, `colsample_bytree=0.8`, `tree_method='hist'`, `random_state=42`).
+
+8. Tréning a validačný protokol (`notebooks/02_training.ipynb`)
+---------------------------------------------------------------
+1. Načítanie `data/processed/clean.csv`, aplikácia `add_engineered_features`, výpočet `log_price = log(price)` pre tréning.
+2. Vytvorenie preprocesora `build_preprocessor()` a modelov `get_models()`.
+3. Validačné schémy:
+   - 5-násobná K-fold validácia (`KFold(n_splits=5, shuffle=True, random_state=42)`) pre zhodnotenie všeobecnej presnosti.
+   - Time-split: rozdelenie podľa 75. percentilu stĺpca `year` (train na starších, test na novších zariadeniach) – kompenzuje technologický drift.
+4. Pre každý model a protokol sa uložia metriky do `outputs/metrics_summary.csv`.
+5. Intermediálne výsledky (na foldy) možno použiť na ďalšiu štatistickú analýzu (bootstrap CI, párové t-testy – zatiaľ iba plánované).
+
+9. Metriky (`src/evaluation.py`)
+-------------------------------
+- `RMSE` – koreň zo strednej kvadratickej chyby (výsledky v pôvodných jednotkách INR).
+- `MAPE` – priemerná absolútna percentuálna chyba (ochrana pred delením nulou cez eps=1e-9).
+- `R2` – koeficient determinácie.
+- V notebooku sa pred výpočtom metrík exponujú predikcie aj cieľ z log-priestoru do pôvodnej ceny.
+
+10. Výsledky experimentu (`python -m src.experiment_runner`)
+-----------------------------------------------------------
+- Automatizovaný skript spúšťa 5-násobnú K-fold validáciu aj time-split scenár, ukladá kompletnú tabuľku metrík (`outputs/metrics_detailed.csv`), agregované priemery (`outputs/metrics_mean.csv`), grafy (`reports/figures/rmse_kfold.png`, `mape_kfold.png`, `r2_kfold.png`, `rmse_time_split.png`, `mape_time_split.png`) a textový report (`reports/experiment_summary.txt`).
+- **K-fold (priemer)**: XGBoost dosiahol najnižšie RMSE 23 773 ± 4 886 INR, MAPE 10,47 % a R² = 0,864. Random Forest je tesne druhý (RMSE ≈ 24 974, MAPE 11,08 %, R² = 0,852), zatiaľ čo OLS baseline má RMSE ≈ 40 797 a MAPE 26,79 %.
+- **Time-split (train ≤ 2023, test > 2023, 34 položiek)**: Najlepšie výsledky dosiahol Random Forest (RMSE ≈ 24 918, MAPE 18,24 %, R² = 0,912). XGBoost je druhý (32 216 INR, 19,05 %, R² = 0,853), SVR už stráca (38 170 INR).
+- **Zlepšenie oproti baseline**: XGBoost znížil RMSE voči OLS o ~17 024 INR (41,7 %) pri K-fold; Random Forest pribl. o 15 822 INR (39 %). Ensemble modely jednoznačne prekonávajú lineárne baseline.
+- **Štatistické testy a CI**: K dispozícii sú bootstrap 95 % CI (`outputs/metrics_ci.csv`, napr. XGBoost RMSE 20 043 – 27 775) a párové t-testy voči OLS (`outputs/stat_tests.csv`). Pri RMSE je prínos XGBoost tesne signifikantný (p≈0,049, Cohen d≈−1,25), pri MAPE sú Random Forest, Ridge, SVR aj XGBoost štatisticky lepšie (p < 0,01) s výraznými efektmi (|d| > 3).
+- Detailné poradie a slovné hodnotenie je v súbore `reports/experiment_summary.txt`, ktorý sumarizuje aj grafické artefakty a poznámky k validácii.
+
+11. Explainability (`notebooks/03_explainability.ipynb`)
+-------------------------------------------------------
+- Tréning pipeline s XGBoost modelom na celom datasete (log-ceny).
+- Transformácia vstupov na ohe-onehot matice cez preprocesor.
+- SHAP analýza: `shap.TreeExplainer`, `shap.summary_plot` s uložením do `reports/figures/shap_summary.png`.
+- Graf ukazuje dôležitosť jednotlivých čŕt (vrátane OneHot stĺpcov) na výslednú cenu.
+
+4.4.4 Explainability (SHAP)
+---------------------------
+- Skript `python -m src.explainability` trénuje XGBoost na zlúčenom datasete (ten istý pipeline) a vyhodnocuje SHAP na vzorke 1 000 záznamov (background 500).
+- Artefakty sú v `reports/explainability/`:
+  - `shap_summary.png` – SHAP summary plot (top 25 čŕt po one-hot transformácii).
+  - `shap_feature_importance.csv` – tabuľka mean |SHAP| pre všetky transformované črty.
+  - `explainability_summary.txt` – agregované hodnoty podľa pôvodných stĺpcov.
+- Najvyššie príspevky: `storage_gb`, `screen_inches`, `cpu_gen`, `storage_is_ssd`, `ram_gb`, `rating`, `cpu_threads`, `cpu_physical_cores`. CPU črty (generácia, thready, jadrá) patria medzi top faktory → podporuje H₂. GPU kategórie majú zanedbateľný SHAP (väčšina syntetických dát neobsahuje detailné GPU), preto je ich prínos nízky.
+
+4.5 Diskusia
+------------
+H₁ potvrdená: ML (XGB, RF) dosahujú nižšiu chybu než lineárne baseline (najmä v MAPE).
+H₂ podporená: SHAP analýza (`reports/explainability/`) ukazuje, že parametre CPU (`cpu_gen`, `cpu_threads`, `cpu_physical_cores`) patria medzi najvýznamnejšie črty; príspevok GPU je vzhľadom na dáta zanedbateľný (syntetický dataset neobsahuje detailné GPU kategórie).
+H₃ podporená: RF je v time-split robustnejší než XGB → technologický drift.
+
+12. Workflow a artefakty
+------------------------
+- `notebooks/01_eda.ipynb` → pripraví `data/processed/clean.csv`.
+- `notebooks/02_training.ipynb` → vytvorí `outputs/metrics_summary.csv` (tabuľka výsledkov `model`, `RMSE`, `MAPE`, `R2`, `protocol`, `cutoff` pre time-split).
+- `notebooks/03_explainability.ipynb` → uloží SHAP graf (png) do `reports/figures/`.
+- Dokumentácia k spusteniu: `README.md`, `STEP_BY_STEP.md`.
+
+13. Reprodukovateľnosť
+----------------------
+- Python ≥ 3.10.
+- Závislosti: `pandas`, `numpy`, `scikit-learn`, `xgboost`, `shap`, `matplotlib`, `seaborn` (`requirements.txt`).
+- Náhodný generátor: `np.random.seed(42)`

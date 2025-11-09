@@ -1,0 +1,1 @@
+Vlož sem Kaggle CSV súbor(y) pre Laptop Price Dataset (Suman Bera).

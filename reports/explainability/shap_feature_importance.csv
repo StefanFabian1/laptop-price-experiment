@@ -1,0 +1,874 @@
+feature_name,mean_abs_shap
+num__storage_gb,0.19073493570804595
+num__screen_inches,0.05426199684143069
+num__cpu_gen,0.049518413481712355
+num__storage_is_ssd,0.03571354590892788
+num__ram_gb,0.028975579977035478
+num__rating,0.0264865937805176
+num__cpu_threads,0.018504584174156128
+num__cpu_physical_cores,0.011236246280670204
+num__warranty_years,0.0025264525699616076
+num__year,0.0002215556049347196
+cat__gpu_12 GB Nvidia GeForce RTX4080,0.0
+cat__gpu_16 GB NVIDIA GeForce RTX 3080Ti,0.0
+cat__gpu_16 GB NVIDIA GeForce RTX 3080 Ti ,0.0
+"cat__gpu_15.6 inches, 1920 x 1080 pixels",0.0
+cat__gpu_14 Core GPU,0.0
+cat__gpu_12 GB NVIDIA GeForce RTX 3080 Ti,0.0
+cat__gpu_12 GB NVIDIA Geforce RTX 4080,0.0
+cat__gpu_12 GB NVIDIA GeForce RTX 4080,0.0
+cat__gpu_12 GB NVIDIA GeForce RTX 3500 Ada,0.0
+cat__gpu_16 GB NVIDIA GeForce RTX 4090 ,0.0
+cat__gpu_12 GB NVIDIA GEFORCE RTX 4080,0.0
+cat__gpu_16 GB NVIDIA GeForce RTX 4090,0.0
+cat__gpu_2 GB NVIDIA GeForce MX450,0.0
+"cat__gpu_16 inches, 1920 x 1080 pixels",0.0
+cat__gpu_18 Core GPU,0.0
+"cat__gpu_18 inches, 3840 x 2400 pixels",0.0
+cat__gpu_256 GB SSD,0.0
+cat__gpu_10 Core GPU,0.0
+cat__gpu_2 GB NVIDIA GeForce MX570,0.0
+cat__gpu_30 Core GPU,0.0
+cat__gpu_40 Core GPU,0.0
+cat__gpu_4 GB  NVIDIA GeForce RTX 2050,0.0
+cat__gpu_4 GB AMD Radeon AMD Radeon RX 6500M,0.0
+cat__gpu_4 GB AMD Radeon RX 5600M ,0.0
+cat__gpu_10-Core GPU,0.0
+cat__cpu_MediaTek Kompanio Kompanio 520,0.0
+cat__cpu_intel Celeron  N4020,0.0
+cat__cpu_Samsung Cortex A72&A53 2.0GHz,0.0
+cat__cpu_Intel Core i7 7820HQ 2.9GHz,0.0
+cat__cpu_Intel Core i7 7Y75 1.3GHz,0.0
+cat__cpu_Intel Core i7 8550U 1.8GHz,0.0
+cat__cpu_Intel Core i7 8650U 1.9GHz,0.0
+cat__cpu_Intel Core i9 14900HX,0.0
+cat__cpu_Intel Pentium Dual Core 4405U 2.1GHz,0.0
+cat__cpu_Intel Pentium Dual Core 4405Y 1.5GHz,0.0
+cat__cpu_Intel Pentium Dual Core N4200 1.1GHz,0.0
+cat__cpu_Intel Pentium Gold 7505,0.0
+cat__cpu_Intel Pentium N100,0.0
+cat__cpu_Intel Pentium Quad Core N3700 1.6GHz,0.0
+cat__cpu_Intel Pentium Quad Core N3710 1.6GHz,0.0
+cat__cpu_Intel Pentium Quad Core N4200 1.1GHz,0.0
+cat__cpu_Intel Pentium Silver   N6000 ,0.0
+cat__cpu_Intel Pentium Silver N6000,0.0
+cat__cpu_Intel Xeon E3-1505M V6 3.0GHz,0.0
+cat__cpu_Intel Xeon E3-1535M v5 2.9GHz,0.0
+cat__cpu_Intel Xeon E3-1535M v6 3.1GHz,0.0
+cat__cpu_Intel ‎Celeron N4020,0.0
+cat__cpu_MediaTek Kompanio 520 Kompanio 520,0.0
+cat__gpu_4 GB AMD Radeon RX 6500M Graphics,0.0
+cat__cpu_MediaTek MT8183,0.0
+cat__cpu_Processor: 12th Generation Intel Core i5-1235U processor (1.3 GHz up to 4.4 GHz 12 MB L3…,0.0
+cat__gpu_4 GB AMD Radeon RX 6500M,0.0
+cat__gpu_4 GB NVIDIA GTX 1650,0.0
+cat__gpu_4 GB AMD Radeon RX6500M,0.0
+cat__gpu_6 GB NVIDIA GeForce RTX 3050,0.0
+cat__gpu_6 GB NVIDIA GeForce RTX 3060,0.0
+cat__gpu_6 GB NVIDIA GeForce RTX 4050,0.0
+cat__gpu_6 GB NVIDIA Geforce RTX 4050,0.0
+cat__gpu_6 GB NVIDIA RTX 4050,0.0
+cat__gpu_6 GB Nvidia GeForce RTX 4050,0.0
+cat__gpu_8-Core GPU,0.0
+cat__gpu_8 GB NVIDIA GEFORCE RTX 4060,0.0
+cat__gpu_8 GB NVIDIA GeForce RTX 3070 Ti ,0.0
+cat__gpu_8 GB NVIDIA GeForce RTX 4060,0.0
+cat__gpu_8 GB NVIDIA GeForce RTX 4060 ,0.0
+cat__gpu_8 GB NVIDIA GeForce RTX 4070,0.0
+cat__gpu_8 GB NVIDIA GeForce RTX A2000 Ada,0.0
+cat__gpu_8 GB NVIDIA Geforce RTX 4060,0.0
+cat__gpu_8 GB NVIDIA RTX 3000 Ada,0.0
+cat__gpu_8 GB Nvidia GeForce RTX 4060,0.0
+cat__gpu_AMD FirePro W4190M,0.0
+cat__gpu_AMD FirePro W5130M,0.0
+cat__gpu_AMD FirePro W6150M,0.0
+cat__gpu_AMD Graphics,0.0
+cat__gpu_AMD Integrated,0.0
+cat__gpu_AMD Integrated SoC,0.0
+cat__gpu_AMD R17M-M1-70,0.0
+cat__gpu_AMD R4 Graphics,0.0
+cat__gpu_6 GB NVIDIA GeForce RTX 3050 ,0.0
+cat__gpu_6 GB NVIDIA GEFORCE RTX 4050,0.0
+cat__gpu_4 GB AMD Radeon RX6550M,0.0
+cat__gpu_512 GB SSD,0.0
+cat__gpu_4 GB Intel Integrated ARC A530M,0.0
+cat__gpu_4 GB NVIDIA ,0.0
+cat__cpu_Intel Core i7 7700HQ 2.8GHz,0.0
+cat__gpu_4 GB NVIDIA GeForce GTX 1650,0.0
+cat__gpu_4 GB NVIDIA GeForce GTX 1650 ,0.0
+cat__gpu_4 GB NVIDIA GeForce GTX 1650 Max Q,0.0
+cat__gpu_4 GB NVIDIA GeForce GTX 2050,0.0
+cat__gpu_4 GB NVIDIA GeForce GTX 3050,0.0
+cat__gpu_4 GB NVIDIA GeForce RTX 2050,0.0
+cat__gpu_4 GB NVIDIA GeForce RTX 2050 ,0.0
+cat__gpu_4 GB NVIDIA GeForce RTX 3050,0.0
+cat__gpu_4 GB NVIDIA GeForce RTX 3050 ,0.0
+cat__gpu_4 GB NVIDIA GeForce RTX 3050 GPU,0.0
+cat__gpu_4 GB NVIDIA GeForce RTX 3050 Ti,0.0
+cat__gpu_4 GB NVIDIA GeForce RTX RTX 3050,0.0
+cat__gpu_4 GB NVIDIA GeForce RTX2050,0.0
+cat__gpu_4 GB NVIDIA Geforce RTX 2050,0.0
+cat__gpu_4 GB NVIDIA Geforce RTX 3050,0.0
+cat__gpu_4 GB NVIDIA RTX A500,0.0
+cat__gpu_4 GB NVIDIA RTX NVIDIA T550,0.0
+cat__gpu_4 GB Nvidia RTX 3050,0.0
+cat__gpu_4 GB ‎NVIDIA GeForce RTX 3050,0.0
+cat__gpu_4 GB ‎NVIDIA Quadro T600,0.0
+cat__cpu_Intel Core i7 7820HK 2.9GHz,0.0
+cat__cpu_Intel Core i7 7500U 2.7GHz,0.0
+cat__cpu_Intel Core i7 7700HQ 2.7GHz,0.0
+cat__cpu_Intel Atom x5-Z8550 1.44GHz,0.0
+cat__cpu_Intel Celeron  N4020 ,0.0
+cat__cpu_Intel Celeron  N4500,0.0
+cat__cpu_Intel Celeron Dual Core 3205U 1.5GHz,0.0
+cat__cpu_Intel Celeron Dual Core 3855U 1.6GHz,0.0
+cat__cpu_Intel Celeron Dual Core N3050 1.6GHz,0.0
+cat__cpu_Intel Celeron Dual Core N3060 1.6GHz,0.0
+cat__cpu_Intel Celeron Dual Core N3350 1.1GHz,0.0
+cat__cpu_Intel Celeron Dual Core N3350 2.0GHz,0.0
+cat__cpu_Intel Celeron Dual Core N4500,0.0
+cat__cpu_Intel Celeron N4020,0.0
+cat__cpu_Intel Celeron N4500,0.0
+cat__cpu_Intel Celeron Quad Core N3160 1.6GHz,0.0
+cat__cpu_Intel Celeron Quad Core N3450 1.1GHz,0.0
+cat__cpu_Intel Celeron Quad Core N3710 1.6GHz,0.0
+cat__cpu_Intel Core 3 Processor 100U,0.0
+cat__cpu_Intel Core 5 Processor Series 1 120U,0.0
+cat__cpu_Intel Core 7 Processor Series 1 150U,0.0
+cat__cpu_Intel Core M 1.1GHz,0.0
+cat__cpu_Intel Core M 1.2GHz,0.0
+cat__cpu_Intel Core M 6Y30 0.9GHz,0.0
+cat__cpu_Intel Core M 6Y54 1.1GHz,0.0
+cat__cpu_Intel Core M 6Y75 1.2GHz,0.0
+cat__cpu_Intel Core M 7Y30 1.0GHz,0.0
+cat__cpu_Intel Celeron  N4020,0.0
+cat__cpu_Intel Atom x5-Z8350 1.44GHz,0.0
+cat__cpu_Intel Core M M7-6Y75 1.2GHz,0.0
+cat__cpu_Intel Atom x5-Z8300 1.44GHz,0.0
+cat__cpu_Custom 3.83GHz,0.0
+cat__cpu_Custom 3.84GHz,0.0
+cat__cpu_Custom 3.85GHz,0.0
+cat__cpu_Custom 3.86GHz,0.0
+cat__cpu_Custom 3.87GHz,0.0
+cat__cpu_Custom 3.88GHz,0.0
+cat__cpu_Custom 3.89GHz,0.0
+cat__cpu_Custom 3.90GHz,0.0
+cat__cpu_Custom 3.91GHz,0.0
+cat__cpu_Custom 3.92GHz,0.0
+cat__cpu_Custom 3.93GHz,0.0
+cat__cpu_Custom 3.94GHz,0.0
+cat__cpu_Custom 3.95GHz,0.0
+cat__cpu_Custom 3.96GHz,0.0
+cat__cpu_Custom 3.97GHz,0.0
+cat__cpu_Custom 3.98GHz,0.0
+cat__cpu_Custom 3.99GHz,0.0
+cat__cpu_Custom 4.00GHz,0.0
+cat__cpu_HiSilicon  Kirin 9006C 9006C,0.0
+cat__cpu_Intel   N4500,0.0
+cat__cpu_Intel Atom Quad Core Z3735F,0.0
+cat__cpu_Intel Atom X5-Z8350 1.44GHz,0.0
+cat__cpu_Intel Atom Z8350 1.92GHz,0.0
+cat__cpu_Intel Core M M3-6Y30 0.9GHz,0.0
+cat__cpu_Intel Core M m3 1.2GHz,0.0
+cat__cpu_Intel Core i7 7660U 2.5GHz,0.0
+cat__cpu_Intel Core i5 6440HQ 2.6GHz,0.0
+cat__cpu_Intel Core i5 7200U 2.7GHz,0.0
+cat__cpu_Intel Core i5 7300HQ 2.5GHz,0.0
+cat__cpu_Intel Core i5 7300U 2.6GHz,0.0
+cat__cpu_Intel Core i5 7440HQ 2.8GHz,0.0
+cat__cpu_Intel Core i5 7500U 2.7GHz,0.0
+cat__cpu_Intel Core i5 7Y54 1.2GHz,0.0
+cat__cpu_Intel Core i5 7Y57 1.2GHz,0.0
+cat__cpu_Intel Core i5 8250U 1.6GHz,0.0
+cat__cpu_Intel Core i7 2.2GHz,0.0
+cat__cpu_Intel Core i7 2.7GHz,0.0
+cat__cpu_Intel Core i7 2.8GHz,0.0
+cat__cpu_Intel Core i7 2.9GHz,0.0
+cat__cpu_Intel Core i7 6500U 2.5GHz,0.0
+cat__cpu_Intel Core i7 6560U 2.2GHz,0.0
+cat__cpu_Intel Core i7 6600U 2.6GHz,0.0
+cat__cpu_Intel Core i7 6700HQ 2.6GHz,0.0
+cat__cpu_Intel Core i7 6820HK 2.7GHz,0.0
+cat__cpu_Intel Core i7 6820HQ 2.7GHz,0.0
+cat__cpu_Intel Core i7 6920HQ 2.9GHz,0.0
+cat__cpu_Intel Core i7 7500U 2.5GHz,0.0
+cat__gpu_AMD Radeon 520,0.0
+cat__cpu_Intel Core i7 7560U 2.4GHz,0.0
+cat__cpu_Intel Core i7 7600U 2.8GHz,0.0
+cat__cpu_Intel Core i5 7200U 2.5GHz,0.0
+cat__cpu_Intel Core i5 6300U 2.4GHz,0.0
+cat__cpu_Intel Core M m3-7Y30 2.2GHz,0.0
+cat__cpu_Intel Core i5 6300HQ 2.3GHz,0.0
+cat__cpu_Intel Core M m7-6Y75 1.2GHz,0.0
+cat__cpu_Intel Core Ultra 5 125U,0.0
+cat__cpu_Intel Core Ultra 5 Series 1 125H,0.0
+cat__cpu_Intel Core Ultra 7 155H,0.0
+cat__cpu_Intel Core Ultra 7 155U,0.0
+cat__cpu_Intel Core Ultra 7 Series 1 155H,0.0
+cat__cpu_Intel Core Ultra 9 Series 1 185H,0.0
+cat__cpu_Intel Core i3 6006U 2.0GHz,0.0
+cat__cpu_Intel Core i3 6006U 2.2GHz,0.0
+cat__cpu_Intel Core i3 6100U 2.1GHz,0.0
+cat__cpu_Intel Core i3 6100U 2.3GHz,0.0
+cat__cpu_Intel Core i3 7100U 2.4GHz,0.0
+cat__cpu_Intel Core i3 7130U 2.7GHz,0.0
+cat__cpu_Intel Core i3 N305,0.0
+cat__cpu_Intel Core i5 1.3GHz,0.0
+cat__cpu_Intel Core i5 1.6GHz,0.0
+cat__cpu_Intel Core i5 1.8GHz,0.0
+cat__cpu_Intel Core i5 2.0GHz,0.0
+cat__cpu_Intel Core i5 2.3GHz,0.0
+cat__cpu_Intel Core i5 2.9GHz,0.0
+cat__cpu_Intel Core i5 3.1GHz,0.0
+cat__cpu_Intel Core i5 6200U 2.3GHz,0.0
+cat__cpu_Intel Core i5 6260U 1.8GHz,0.0
+cat__gpu_AMD Radeon,0.0
+cat__gpu_AMD Radeon 680M,0.0
+cat__gpu_AMD Radeon 530,0.0
+cat__gpu_Nvidia GeForce GTX1060,0.0
+cat__gpu_Nvidia GeForce GTX 940M,0.0
+cat__gpu_Nvidia GeForce GTX 940MX,0.0
+cat__gpu_Nvidia GeForce GTX 950M,0.0
+cat__gpu_Nvidia GeForce GTX 960,0.0
+cat__gpu_Nvidia GeForce GTX 960<U+039C>,0.0
+cat__gpu_Nvidia GeForce GTX 960M,0.0
+cat__gpu_Nvidia GeForce GTX 965M,0.0
+cat__gpu_Nvidia GeForce GTX 970M,0.0
+cat__gpu_Nvidia GeForce GTX 980,0.0
+cat__gpu_Nvidia GeForce GTX 980M,0.0
+cat__gpu_Nvidia GeForce GTX1050 Ti,0.0
+cat__gpu_Nvidia GeForce GTX1080,0.0
+cat__gpu_AMD Radeon 540,0.0
+cat__gpu_Nvidia GeForce MX130,0.0
+cat__gpu_Nvidia GeForce MX150,0.0
+cat__gpu_Nvidia Quadro 3000M,0.0
+cat__gpu_Nvidia Quadro M1000M,0.0
+cat__gpu_Nvidia Quadro M1200,0.0
+cat__gpu_Nvidia Quadro M2000M,0.0
+cat__gpu_Nvidia Quadro M2200,0.0
+cat__gpu_Nvidia Quadro M2200M,0.0
+cat__gpu_Nvidia Quadro M3000M,0.0
+cat__gpu_Nvidia Quadro M500M,0.0
+cat__gpu_Nvidia Quadro M520M,0.0
+cat__gpu_Nvidia GeForce GTX 930MX,0.0
+cat__gpu_Nvidia GeForce GTX 1080,0.0
+cat__gpu_Nvidia GeForce GTX 1070M,0.0
+cat__gpu_Nvidia GeForce GTX 1070,0.0
+cat__gpu_Intel UHD Graphics 600,0.0
+cat__gpu_Intel UHD Graphics 620,0.0
+cat__gpu_Intel UHD Integrated,0.0
+cat__gpu_Iris Xe Graphics,0.0
+cat__gpu_Linux OS,0.0
+cat__gpu_NVIDIA GeForce RTX 3050,0.0
+cat__gpu_NVIDIA Geforce RTX,0.0
+cat__gpu_Nvidia GTX 980 SLI,0.0
+cat__gpu_Nvidia GeForce 150MX,0.0
+cat__gpu_Nvidia GeForce 920,0.0
+cat__gpu_Nvidia GeForce 920M,0.0
+cat__gpu_Nvidia GeForce 920MX,0.0
+cat__gpu_Nvidia GeForce 930M,0.0
+cat__gpu_Nvidia GeForce 930MX,0.0
+cat__gpu_Nvidia GeForce 940M,0.0
+cat__gpu_Nvidia GeForce 940MX,0.0
+cat__gpu_Nvidia GeForce 960M,0.0
+cat__gpu_Nvidia GeForce GT 940MX,0.0
+cat__gpu_Nvidia GeForce GTX 1050,0.0
+cat__gpu_Nvidia GeForce GTX 1050 Ti,0.0
+cat__gpu_Nvidia GeForce GTX 1050M,0.0
+cat__gpu_Nvidia GeForce GTX 1050Ti,0.0
+cat__gpu_Nvidia GeForce GTX 1060,0.0
+cat__gpu_Nvidia Quadro M620,0.0
+cat__gpu_Nvidia Quadro M620M,0.0
+cat__gpu_Preinstalled Software: MS Office Home & Student 2021,0.0
+cat__os_macOS,0.0
+cat__storage_type_hdd,0.0
+cat__storage_type_hybrid,0.0
+cat__storage_type_other,0.0
+cat__storage_type_ssd,0.0
+cat__storage_type_unknown,0.0
+cat__cpu_vendor_AMD,0.0
+cat__cpu_vendor_Apple,0.0
+cat__cpu_vendor_Intel,0.0
+cat__cpu_vendor_Other,0.0
+cat__gpu_vendor_AMD,0.0
+cat__gpu_vendor_Apple,0.0
+cat__gpu_vendor_Intel,0.0
+cat__gpu_vendor_NVIDIA,0.0
+cat__gpu_vendor_Other,0.0
+cat__cpu_gpu_combo_AMD_AMD,0.0
+cat__cpu_gpu_combo_Apple_Apple,0.0
+cat__cpu_gpu_combo_Apple_Other,0.0
+cat__cpu_gpu_combo_Intel_AMD,0.0
+cat__cpu_gpu_combo_Intel_Intel,0.0
+cat__cpu_gpu_combo_Intel_Other,0.0
+cat__cpu_gpu_combo_Other_AMD,0.0
+cat__cpu_gpu_combo_Other_Intel,0.0
+cat__cpu_gpu_combo_Other_NVIDIA,0.0
+cat__os_unknown,0.0
+cat__os_Windows OS,0.0
+cat__gpu_Unknown GPU,0.0
+cat__os_Windows 7,0.0
+cat__gpu_‎Intel Iris Xe Graphics,0.0
+cat__gpu_‎Intel UHD Graphics,0.0
+cat__os_1 Year Warranty,0.0
+"cat__os_15.6 inches, 1920 x 1080 pixels",0.0
+cat__os_2 Year Warranty,0.0
+cat__os_Android,0.0
+cat__os_Backlit Keyboard,0.0
+cat__os_Chrome OS,0.0
+cat__os_DOS 3.0 OS,0.0
+cat__os_DOS OS,0.0
+cat__os_Intel Iris Xe Graphics,0.0
+cat__os_Linux,0.0
+cat__os_Mac OS,0.0
+cat__os_Mac OS X,0.0
+cat__os_No OS,0.0
+cat__os_Ubuntu OS,0.0
+cat__os_Windows 10,0.0
+cat__os_Windows 10  OS,0.0
+cat__os_Windows 10 OS,0.0
+cat__os_Windows 10 S,0.0
+cat__os_Windows 11  OS,0.0
+cat__os_Windows 11 OS,0.0
+cat__os_Windows 11 Pro OS,0.0
+cat__gpu_Intel UHD Graphics ,0.0
+cat__gpu_Intel UHD Graphics,0.0
+cat__gpu_Intel UHD,0.0
+cat__gpu_AMD Radeon R7 Graphics,0.0
+cat__gpu_AMD Radeon R7 M365X,0.0
+cat__gpu_AMD Radeon R7 M440,0.0
+cat__gpu_AMD Radeon R7 M445,0.0
+cat__gpu_AMD Radeon R7 M460,0.0
+cat__gpu_AMD Radeon R7 M465,0.0
+cat__gpu_AMD Radeon R9 M385,0.0
+cat__gpu_AMD Radeon RX 540,0.0
+cat__gpu_AMD Radeon RX 550,0.0
+cat__gpu_AMD Radeon RX 560,0.0
+cat__gpu_AMD Radeon RX 580,0.0
+cat__gpu_AMD Radeon Radeon,0.0
+cat__gpu_AMD Radeon Radeon Graphics,0.0
+cat__gpu_AMD Radeon Vega 7,0.0
+cat__gpu_AMD Radeon Vega 8 Graphics,0.0
+cat__gpu_AMD Raedon Graphics,0.0
+cat__gpu_ARM Mali G72,0.0
+cat__gpu_ARM Mali T860 MP4,0.0
+cat__gpu_Apple 10 Core GPU,0.0
+cat__gpu_Apple 8 Core GPU,0.0
+cat__gpu_Apple M1 Integrated Graphics,0.0
+cat__gpu_Arm Mali G52 MC2 2EE,0.0
+cat__gpu_Arm Mali G52 MC2 2EE Graphics,0.0
+cat__gpu_Arm Mali-G72 MP3,0.0
+cat__gpu_AMD Radeon R7 M360,0.0
+cat__gpu_AMD Radeon R7,0.0
+cat__gpu_Integrated Intel Graphics,0.0
+cat__gpu_AMD Radeon R5 M430,0.0
+cat__gpu_AMD Radeon 610M,0.0
+cat__gpu_AMD Radeon 610M Graphics,0.0
+cat__cpu_Custom 3.81GHz,0.0
+cat__gpu_AMD Radeon 7 Graphics,0.0
+cat__gpu_AMD Radeon 780M Graphics,0.0
+cat__gpu_AMD Radeon AMD,0.0
+cat__gpu_AMD Radeon Graphics,0.0
+cat__gpu_AMD Radeon Integrated Graphics,0.0
+cat__gpu_AMD Radeon Pro 455,0.0
+cat__gpu_AMD Radeon Pro 555,0.0
+cat__gpu_AMD Radeon Pro 560,0.0
+cat__gpu_AMD Radeon R2,0.0
+cat__gpu_AMD Radeon R2 Graphics,0.0
+cat__gpu_AMD Radeon R3,0.0
+cat__gpu_AMD Radeon R4,0.0
+cat__gpu_AMD Radeon R4 Graphics,0.0
+cat__gpu_AMD Radeon R5,0.0
+cat__gpu_AMD Radeon R5 430,0.0
+cat__gpu_AMD Radeon R5 520,0.0
+cat__gpu_AMD Radeon R5 M315,0.0
+cat__gpu_AMD Radeon R5 M330,0.0
+cat__gpu_AMD Radeon R5 M420,0.0
+cat__gpu_AMD Radeon R5 M420X,0.0
+cat__gpu_Integrated AMD Radeon Graphics,0.0
+cat__gpu_Integrated Intel Iris Xe Graphics,0.0
+cat__gpu_Intel Iris Xᵉ Graphics,0.0
+cat__gpu_Intel Integrated Graphics,0.0
+cat__gpu_Intel Integrated Integrated,0.0
+cat__gpu_Intel Integrated Integrated Intel® UHD Graphics,0.0
+cat__gpu_Intel Integrated Intel Iris Xe,0.0
+cat__gpu_Intel Integrated Intel Iris Xe Graphics,0.0
+cat__gpu_Intel Integrated Intel UHD,0.0
+cat__gpu_Intel Integrated Intel UHD Graphics,0.0
+cat__gpu_Intel Integrated Iris,0.0
+cat__gpu_Intel Integrated Iris Xe,0.0
+cat__gpu_Intel Integrated UHD,0.0
+cat__gpu_Intel Integrated UHD 600,0.0
+cat__gpu_Intel Integrated UHD Graphics,0.0
+cat__gpu_Intel Iris Graphics 540,0.0
+cat__gpu_Intel Iris Graphics 550,0.0
+cat__gpu_Intel Iris Plus Graphics 640,0.0
+cat__gpu_Intel Iris Plus Graphics 650,0.0
+cat__gpu_Intel Iris Pro Graphics,0.0
+cat__gpu_Intel Iris X Graphics,0.0
+cat__gpu_Intel Iris Xe,0.0
+cat__gpu_Intel Iris Xe Graphic,0.0
+cat__gpu_Intel Iris Xe Graphics,0.0
+cat__gpu_Intel Iris Xe Graphics ,0.0
+cat__gpu_Intel Iris Xe Graphics comes,0.0
+cat__gpu_Intel Iris Xe Integrated Graphics,0.0
+cat__gpu_Intel Integrated Graphics ,0.0
+cat__gpu_Intel Integrated Arc,0.0
+cat__gpu_Integrated Intel IrisXe Graphics,0.0
+cat__gpu_Intel Integrated ARC Graphics,0.0
+cat__gpu_Integrated Intel UHD Graphics,0.0
+cat__gpu_Integrated Intel UHD Graphics 600,0.0
+cat__gpu_Intel  ARC Graphics,0.0
+cat__gpu_Intel ARC Graphics,0.0
+cat__gpu_Intel Arc Graphics,0.0
+cat__gpu_Intel Graphics,0.0
+cat__gpu_Intel Graphics 620,0.0
+cat__gpu_Intel HD Graphics,0.0
+cat__gpu_Intel HD Graphics 400,0.0
+cat__gpu_Intel HD Graphics 405,0.0
+cat__gpu_Intel HD Graphics 500,0.0
+cat__gpu_Intel HD Graphics 505,0.0
+cat__gpu_Intel HD Graphics 510,0.0
+cat__gpu_Intel HD Graphics 515,0.0
+cat__gpu_Intel HD Graphics 520,0.0
+cat__gpu_Intel HD Graphics 530,0.0
+cat__gpu_Intel HD Graphics 5300,0.0
+cat__gpu_Intel HD Graphics 540,0.0
+cat__gpu_Intel HD Graphics 6000,0.0
+cat__gpu_Intel HD Graphics 615,0.0
+cat__gpu_Intel HD Graphics 620,0.0
+cat__gpu_Intel HD Graphics 630,0.0
+cat__gpu_Intel Integrated,0.0
+cat__cpu_Custom 3.82GHz,0.0
+cat__cpu_Custom 3.75GHz,0.0
+cat__cpu_Custom 3.80GHz,0.0
+cat__cpu_5th Gen AMD Ryzen 7 5700U,0.0
+cat__cpu_5th Gen AMD Ryzen 7 5800HS,0.0
+cat__cpu_5th Gen AMD Ryzen 7 5800U,0.0
+cat__cpu_5th Gen AMD Ryzen 7 5825U,0.0
+cat__cpu_6th Gen AMD Ryzen 5 6600H,0.0
+cat__cpu_6th Gen AMD Ryzen 7  6800H,0.0
+cat__cpu_6th Gen AMD Ryzen 7  7735HS,0.0
+cat__cpu_6th Gen AMD Ryzen 7 6800H,0.0
+cat__cpu_6th Gen AMD Ryzen 7 6800H ,0.0
+cat__cpu_6th Gen AMD Ryzen 7 6800HS ,0.0
+cat__cpu_6th Gen AMD Ryzen 9 6900HS​,0.0
+cat__cpu_7th Gen AMD Ryzen 3 7320U,0.0
+cat__cpu_7th Gen AMD Ryzen 3 7330U,0.0
+cat__cpu_7th Gen AMD Ryzen 5 7520U,0.0
+cat__cpu_7th Gen AMD Ryzen 5 7520U ,0.0
+cat__cpu_7th Gen AMD Ryzen 5 7530U,0.0
+cat__cpu_7th Gen AMD Ryzen 5 7535HS,0.0
+cat__cpu_7th Gen AMD Ryzen 7  7730U,0.0
+cat__cpu_7th Gen AMD Ryzen 7  7735HS,0.0
+cat__cpu_7th Gen AMD Ryzen 7 7730U,0.0
+cat__cpu_7th Gen AMD Ryzen 7 7735HS,0.0
+cat__cpu_7th Gen AMD Ryzen 7 7735U,0.0
+cat__cpu_7th Gen AMD Ryzen 7 7745HX,0.0
+cat__cpu_7th Gen AMD Ryzen 7 7840HS,0.0
+cat__cpu_5th Gen AMD Ryzen 7 5800H,0.0
+cat__cpu_5th Gen AMD Ryzen 7  5800H,0.0
+cat__cpu_7th Gen AMD Ryzen 7040 Series 040,0.0
+cat__cpu_5th Gen AMD Ryzen 7  5700U,0.0
+cat__cpu_13th Gen Intel Core i9 13950HX,0.0
+cat__cpu_13th Gen Intel Core i9 13980HX,0.0
+cat__cpu_13th Gen ‎Intel Core i3 1315U,0.0
+cat__cpu_13th Gen ‎Intel Core i5 1335U,0.0
+cat__cpu_14th Gen Intel Core i7 14700HX,0.0
+cat__cpu_14th Gen Intel Core i9 14900HX,0.0
+cat__cpu_3rd Gen AMD Athlon 3050U,0.0
+cat__cpu_3rd Gen AMD Ryzen 3  3250U,0.0
+cat__cpu_3rd Gen AMD Ryzen 3 3250U,0.0
+cat__cpu_4th Gen AMD Ryzen 7 PRO 4750U,0.0
+cat__cpu_4th Gen Intel Celeron N4020,0.0
+cat__cpu_5th Gen AMD Ryzen 3 5300U,0.0
+cat__cpu_5th Gen AMD Ryzen 5  5500H,0.0
+cat__cpu_5th Gen AMD Ryzen 5  5500U,0.0
+cat__cpu_5th Gen AMD Ryzen 5  5500u,0.0
+cat__cpu_5th Gen AMD Ryzen 5  5600H,0.0
+cat__cpu_5th Gen AMD Ryzen 5  5600H ,0.0
+cat__cpu_5th Gen AMD Ryzen 5 5500H,0.0
+cat__cpu_5th Gen AMD Ryzen 5 5500U,0.0
+cat__cpu_5th Gen AMD Ryzen 5 5600H,0.0
+cat__cpu_5th Gen AMD Ryzen 5 5600H ,0.0
+cat__cpu_5th Gen AMD Ryzen 5 5600HS,0.0
+cat__cpu_5th Gen AMD Ryzen 7   5700U,0.0
+cat__cpu_7th Gen AMD Ryzen 7 7840U,0.0
+cat__cpu_7th Gen AMD Ryzen 9 7940HS,0.0
+cat__cpu_13th Gen Intel Core i9 13900HX,0.0
+cat__cpu_AMD A9-Series A9-9420 3.0GHz,0.0
+cat__cpu_AMD Athlon Silver 7120U,0.0
+cat__cpu_AMD E-Series 6110 1.5GHz,0.0
+cat__cpu_AMD E-Series 7110 1.8GHz,0.0
+cat__cpu_AMD E-Series 9000 2.2GHz,0.0
+cat__cpu_AMD E-Series 9000e 1.5GHz,0.0
+cat__cpu_AMD E-Series E2-6110 1.5GHz,0.0
+cat__cpu_AMD E-Series E2-9000 2.2GHz,0.0
+cat__cpu_AMD E-Series E2-9000e 1.5GHz,0.0
+cat__cpu_AMD FX 8800P 2.1GHz,0.0
+cat__cpu_AMD FX 9830P 3.0GHz,0.0
+cat__cpu_AMD Ryzen 1600 3.2GHz,0.0
+cat__cpu_AMD Ryzen 1700 3.0GHz,0.0
+cat__cpu_Apple M1,0.0
+cat__cpu_Apple M2,0.0
+cat__cpu_Apple M3,0.0
+cat__cpu_Apple M3 Max,0.0
+cat__cpu_Apple M3 Pro,0.0
+cat__cpu_Custom 1.51GHz,0.0
+cat__cpu_Custom 1.52GHz,0.0
+cat__cpu_Custom 1.53GHz,0.0
+cat__cpu_Custom 1.54GHz,0.0
+cat__cpu_Custom 1.55GHz,0.0
+cat__cpu_Custom 1.56GHz,0.0
+cat__cpu_AMD Athlon 7120U,0.0
+cat__cpu_AMD A9-Series 9420 3.0GHz,0.0
+cat__cpu_7th Gen Amd Ryzen 5 7520U,0.0
+cat__cpu_AMD A9-Series 9420 2.9GHz,0.0
+cat__cpu_7th Gen Amd Ryzen 5 7530U,0.0
+cat__cpu_7th Gen Amd Ryzen 5 7535HS,0.0
+cat__cpu_7th Gen Amd Ryzen 7 7745HX,0.0
+cat__cpu_7th Gen Amd Ryzen 7 7840H,0.0
+cat__cpu_7th Gen Amd Ryzen 9 7845HX,0.0
+cat__cpu_7th Gen Amd Ryzen 9 7940HS,0.0
+cat__cpu_8th Gen AMD Ryzen 5 8640HS,0.0
+cat__cpu_8th Gen AMD Ryzen 7 8840HS,0.0
+cat__cpu_8th Gen AMD Ryzen 7 8845HS,0.0
+cat__cpu_8th Gen Amd Ryzen 7 8845HS,0.0
+cat__cpu_AMD A10-Series 9600P 2.4GHz,0.0
+cat__cpu_AMD A10-Series 9620P 2.5GHz,0.0
+cat__cpu_AMD A10-Series A10-9620P 2.5GHz,0.0
+cat__cpu_AMD A12-Series 9700P 2.5GHz,0.0
+cat__cpu_AMD A12-Series 9720P 2.7GHz,0.0
+cat__cpu_AMD A12-Series 9720P 3.6GHz,0.0
+cat__cpu_AMD A4-Series 7210 2.2GHz,0.0
+cat__cpu_AMD A6-Series 7310 2.0GHz,0.0
+cat__cpu_AMD A6-Series 9220 2.5GHz,0.0
+cat__cpu_AMD A6-Series 9220 2.9GHz,0.0
+cat__cpu_AMD A6-Series A6-9220 2.5GHz,0.0
+cat__cpu_AMD A8-Series 7410 2.2GHz,0.0
+cat__cpu_AMD A9-Series 9410 2.9GHz,0.0
+cat__cpu_13th Gen Intel Core i9 13900HX ,0.0
+cat__cpu_13th Gen Intel Core i9 13900HK,0.0
+cat__cpu_Custom 1.58GHz,0.0
+cat__brand_Tecno,0.0
+cat__brand_Ultimus,0.0
+cat__brand_Unknown,0.0
+cat__brand_Vero,0.0
+cat__brand_Walker,0.0
+cat__brand_Wings,0.0
+cat__brand_Xiaomi,0.0
+cat__brand_Zebronics,0.0
+cat__brand_iBall,0.0
+cat__cpu_ Mediatek  MT8788,0.0
+cat__cpu_10th Gen Intel Core i3 1005G1,0.0
+cat__cpu_10th Gen Intel Core i5 10210U,0.0
+cat__cpu_10th Gen Intel Core i5 10210Y,0.0
+cat__cpu_10th Gen Intel Core i5 1035G1,0.0
+cat__cpu_10th Gen Intel Core i5 1035G4,0.0
+cat__cpu_10th Gen Intel Core i7 10750H,0.0
+cat__cpu_10th Gen Intel Core i7 10750H ,0.0
+cat__cpu_11th Gen Intel Celeron N5100,0.0
+cat__cpu_11th Gen Intel Core i3  1115G4,0.0
+cat__cpu_11th Gen Intel Core i3 1115G4,0.0
+cat__cpu_11th Gen Intel Core i3 1125G4,0.0
+cat__cpu_11th Gen Intel Core i5 11260H,0.0
+cat__cpu_11th Gen Intel Core i5 11320H,0.0
+cat__cpu_11th Gen Intel Core i5 1135G7,0.0
+cat__brand_Toshiba,0.0
+cat__brand_Samsung,0.0
+cat__cpu_11th Gen Intel Core i5 11400H,0.0
+cat__brand_Razer,0.0
+cat__brand_AXL,0.0
+cat__brand_Acer,0.0
+cat__brand_Apple,0.0
+cat__brand_Asus,0.0
+cat__brand_Avita,0.0
+cat__brand_Chuwi,0.0
+cat__brand_Colorful,0.0
+cat__brand_Dell,0.0
+cat__brand_Fujitsu,0.0
+cat__brand_Gigabyte,0.0
+cat__brand_Google,0.0
+cat__brand_HP,0.0
+cat__brand_Honor,0.0
+cat__brand_Huawei,0.0
+cat__brand_Infinix,0.0
+cat__brand_Jio,0.0
+cat__brand_LG,0.0
+cat__brand_Lenovo,0.0
+cat__brand_MSI,0.0
+cat__brand_Mediacom,0.0
+cat__brand_Microsoft,0.0
+cat__brand_Ninkear,0.0
+cat__brand_Primebook,0.0
+cat__cpu_11th Gen Intel Core i5 1135G7 ,0.0
+cat__cpu_11th Gen Intel Core i5 11400H ,0.0
+cat__cpu_13th Gen Intel Core i9 13900H,0.0
+cat__cpu_12th Gen Intel Core i9 12900H,0.0
+cat__cpu_12th Gen Intel N100 N100,0.0
+cat__cpu_12th Gen intel Core i5 12450H,0.0
+cat__cpu_12th Gen intel Core i5 12450HX,0.0
+cat__cpu_13th Gen Intel Core i3 1305U,0.0
+cat__cpu_13th Gen Intel Core i3 1315U,0.0
+cat__cpu_13th Gen Intel Core i5 1334U,0.0
+cat__cpu_13th Gen Intel Core i5 1335U,0.0
+cat__cpu_13th Gen Intel Core i5 1340P,0.0
+cat__cpu_13th Gen Intel Core i5 1340p,0.0
+cat__cpu_13th Gen Intel Core i5 13420H,0.0
+cat__cpu_13th Gen Intel Core i5 13450HX,0.0
+cat__cpu_13th Gen Intel Core i5 13500H,0.0
+cat__cpu_13th Gen Intel Core i5 13500H ,0.0
+cat__cpu_13th Gen Intel Core i7,0.0
+cat__cpu_13th Gen Intel Core i7 1355U,0.0
+cat__cpu_13th Gen Intel Core i7 1355U ,0.0
+cat__cpu_13th Gen Intel Core i7 1360P,0.0
+cat__cpu_13th Gen Intel Core i7 13620H,0.0
+cat__cpu_13th Gen Intel Core i7 13650HX,0.0
+cat__cpu_13th Gen Intel Core i7 1365U,0.0
+cat__cpu_13th Gen Intel Core i7 13700H,0.0
+cat__cpu_13th Gen Intel Core i7 13700HX,0.0
+cat__cpu_13th Gen Intel Core i7 13700HX ,0.0
+cat__cpu_12th Gen Intel Core i9 12900HX,0.0
+cat__cpu_12th Gen Intel Core i7 12700H ,0.0
+cat__cpu_11th Gen Intel Core i5 1155G7,0.0
+cat__cpu_12th Gen Intel Core i7 12700H,0.0
+cat__cpu_11th Gen Intel Core i5 L16G7,0.0
+cat__cpu_11th Gen Intel Core i7 1165G7,0.0
+cat__cpu_11th Gen Intel Core i7 1165G7 ,0.0
+cat__cpu_11th Gen Intel Core i7 11800H,0.0
+cat__cpu_11th Gen Intel Core i7 1195G7,0.0
+cat__cpu_11th Gen intel Core i3 1115G4,0.0
+cat__cpu_12th Gen Intel Celeron N100,0.0
+cat__cpu_12th Gen Intel Core i3 1215U,0.0
+cat__cpu_12th Gen Intel Core i3 1215U ,0.0
+cat__cpu_12th Gen Intel Core i3 1220P,0.0
+cat__cpu_12th Gen Intel Core i5 1230U,0.0
+cat__cpu_12th Gen Intel Core i5 1235U,0.0
+cat__cpu_12th Gen Intel Core i5 1235U ,0.0
+cat__cpu_12th Gen Intel Core i5 1240P,0.0
+cat__cpu_12th Gen Intel Core i5 12450H,0.0
+cat__cpu_12th Gen Intel Core i5 12450H ,0.0
+cat__cpu_12th Gen Intel Core i5 12500H,0.0
+cat__cpu_12th Gen Intel Core i5 12500H ,0.0
+cat__cpu_12th Gen Intel Core i7 1250U,0.0
+cat__cpu_12th Gen Intel Core i7 1255U,0.0
+cat__cpu_12th Gen Intel Core i7 1260P,0.0
+cat__cpu_12th Gen Intel Core i7 12650H,0.0
+cat__cpu_12th Gen Intel Core i7 12650H ,0.0
+cat__cpu_Custom 1.57GHz,0.0
+cat__cpu_Custom 1.59GHz,0.0
+cat__cpu_Custom 3.79GHz,0.0
+cat__cpu_Custom 2.96GHz,0.0
+cat__cpu_Custom 2.98GHz,0.0
+cat__cpu_Custom 2.99GHz,0.0
+cat__cpu_Custom 3.00GHz,0.0
+cat__cpu_Custom 3.01GHz,0.0
+cat__cpu_Custom 3.02GHz,0.0
+cat__cpu_Custom 3.03GHz,0.0
+cat__cpu_Custom 3.04GHz,0.0
+cat__cpu_Custom 3.05GHz,0.0
+cat__cpu_Custom 3.06GHz,0.0
+cat__cpu_Custom 3.07GHz,0.0
+cat__cpu_Custom 3.08GHz,0.0
+cat__cpu_Custom 3.09GHz,0.0
+cat__cpu_Custom 3.10GHz,0.0
+cat__cpu_Custom 3.11GHz,0.0
+cat__cpu_Custom 3.12GHz,0.0
+cat__cpu_Custom 3.13GHz,0.0
+cat__cpu_Custom 3.14GHz,0.0
+cat__cpu_Custom 3.15GHz,0.0
+cat__cpu_Custom 3.16GHz,0.0
+cat__cpu_Custom 3.17GHz,0.0
+cat__cpu_Custom 3.18GHz,0.0
+cat__cpu_Custom 3.19GHz,0.0
+cat__cpu_Custom 3.20GHz,0.0
+cat__cpu_Custom 2.97GHz,0.0
+cat__cpu_Custom 2.95GHz,0.0
+cat__cpu_Custom 3.22GHz,0.0
+cat__cpu_Custom 2.94GHz,0.0
+cat__cpu_Custom 2.71GHz,0.0
+cat__cpu_Custom 2.72GHz,0.0
+cat__cpu_Custom 2.73GHz,0.0
+cat__cpu_Custom 2.74GHz,0.0
+cat__cpu_Custom 2.75GHz,0.0
+cat__cpu_Custom 2.76GHz,0.0
+cat__cpu_Custom 2.77GHz,0.0
+cat__cpu_Custom 2.78GHz,0.0
+cat__cpu_Custom 2.79GHz,0.0
+cat__cpu_Custom 2.80GHz,0.0
+cat__cpu_Custom 2.81GHz,0.0
+cat__cpu_Custom 2.82GHz,0.0
+cat__cpu_Custom 2.83GHz,0.0
+cat__cpu_Custom 2.84GHz,0.0
+cat__cpu_Custom 2.85GHz,0.0
+cat__cpu_Custom 2.86GHz,0.0
+cat__cpu_Custom 2.87GHz,0.0
+cat__cpu_Custom 2.88GHz,0.0
+cat__cpu_Custom 2.89GHz,0.0
+cat__cpu_Custom 2.90GHz,0.0
+cat__cpu_Custom 2.91GHz,0.0
+cat__cpu_Custom 2.92GHz,0.0
+cat__cpu_Custom 2.93GHz,0.0
+cat__cpu_Custom 3.21GHz,0.0
+cat__cpu_Custom 3.23GHz,0.0
+cat__cpu_Custom 2.69GHz,0.0
+cat__cpu_Custom 3.52GHz,0.0
+cat__cpu_Custom 3.54GHz,0.0
+cat__cpu_Custom 3.55GHz,0.0
+cat__cpu_Custom 3.56GHz,0.0
+cat__cpu_Custom 3.57GHz,0.0
+cat__cpu_Custom 3.58GHz,0.0
+cat__cpu_Custom 3.59GHz,0.0
+cat__cpu_Custom 3.60GHz,0.0
+cat__cpu_Custom 3.61GHz,0.0
+cat__cpu_Custom 3.62GHz,0.0
+cat__cpu_Custom 3.63GHz,0.0
+cat__cpu_Custom 3.64GHz,0.0
+cat__cpu_Custom 3.65GHz,0.0
+cat__cpu_Custom 3.66GHz,0.0
+cat__cpu_Custom 3.67GHz,0.0
+cat__cpu_Custom 3.68GHz,0.0
+cat__cpu_Custom 3.69GHz,0.0
+cat__cpu_Custom 3.70GHz,0.0
+cat__cpu_Custom 3.71GHz,0.0
+cat__cpu_Custom 3.72GHz,0.0
+cat__cpu_Custom 3.73GHz,0.0
+cat__cpu_Custom 3.74GHz,0.0
+cat__cpu_Custom 3.77GHz,0.0
+cat__cpu_Custom 3.78GHz,0.0
+cat__cpu_Custom 3.53GHz,0.0
+cat__cpu_Custom 3.51GHz,0.0
+cat__cpu_Custom 3.24GHz,0.0
+cat__cpu_Custom 3.50GHz,0.0
+cat__cpu_Custom 3.26GHz,0.0
+cat__cpu_Custom 3.27GHz,0.0
+cat__cpu_Custom 3.29GHz,0.0
+cat__cpu_Custom 3.30GHz,0.0
+cat__cpu_Custom 3.31GHz,0.0
+cat__cpu_Custom 3.32GHz,0.0
+cat__cpu_Custom 3.33GHz,0.0
+cat__cpu_Custom 3.34GHz,0.0
+cat__cpu_Custom 3.35GHz,0.0
+cat__cpu_Custom 3.36GHz,0.0
+cat__cpu_Custom 3.37GHz,0.0
+cat__cpu_Custom 3.38GHz,0.0
+cat__cpu_Custom 3.39GHz,0.0
+cat__cpu_Custom 3.40GHz,0.0
+cat__cpu_Custom 3.41GHz,0.0
+cat__cpu_Custom 3.42GHz,0.0
+cat__cpu_Custom 3.43GHz,0.0
+cat__cpu_Custom 3.44GHz,0.0
+cat__cpu_Custom 3.45GHz,0.0
+cat__cpu_Custom 3.46GHz,0.0
+cat__cpu_Custom 3.47GHz,0.0
+cat__cpu_Custom 3.48GHz,0.0
+cat__cpu_Custom 3.49GHz,0.0
+cat__cpu_Custom 2.70GHz,0.0
+cat__cpu_Custom 2.68GHz,0.0
+cat__cpu_Custom 1.60GHz,0.0
+cat__cpu_Custom 1.86GHz,0.0
+cat__cpu_Custom 1.88GHz,0.0
+cat__cpu_Custom 1.89GHz,0.0
+cat__cpu_Custom 1.90GHz,0.0
+cat__cpu_Custom 1.91GHz,0.0
+cat__cpu_Custom 1.92GHz,0.0
+cat__cpu_Custom 1.93GHz,0.0
+cat__cpu_Custom 1.94GHz,0.0
+cat__cpu_Custom 1.95GHz,0.0
+cat__cpu_Custom 1.96GHz,0.0
+cat__cpu_Custom 1.97GHz,0.0
+cat__cpu_Custom 1.98GHz,0.0
+cat__cpu_Custom 1.99GHz,0.0
+cat__cpu_Custom 2.00GHz,0.0
+cat__cpu_Custom 2.01GHz,0.0
+cat__cpu_Custom 2.02GHz,0.0
+cat__cpu_Custom 2.03GHz,0.0
+cat__cpu_Custom 2.04GHz,0.0
+cat__cpu_Custom 2.05GHz,0.0
+cat__cpu_Custom 2.06GHz,0.0
+cat__cpu_Custom 2.07GHz,0.0
+cat__cpu_Custom 2.08GHz,0.0
+cat__cpu_Custom 2.09GHz,0.0
+cat__cpu_Custom 2.10GHz,0.0
+cat__cpu_Custom 1.87GHz,0.0
+cat__cpu_Custom 1.85GHz,0.0
+cat__cpu_Custom 2.12GHz,0.0
+cat__cpu_Custom 1.84GHz,0.0
+cat__cpu_Custom 1.61GHz,0.0
+cat__cpu_Custom 1.62GHz,0.0
+cat__cpu_Custom 1.63GHz,0.0
+cat__cpu_Custom 1.64GHz,0.0
+cat__cpu_Custom 1.65GHz,0.0
+cat__cpu_Custom 1.66GHz,0.0
+cat__cpu_Custom 1.67GHz,0.0
+cat__cpu_Custom 1.68GHz,0.0
+cat__cpu_Custom 1.69GHz,0.0
+cat__cpu_Custom 1.70GHz,0.0
+cat__cpu_Custom 1.71GHz,0.0
+cat__cpu_Custom 1.72GHz,0.0
+cat__cpu_Custom 1.73GHz,0.0
+cat__cpu_Custom 1.74GHz,0.0
+cat__cpu_Custom 1.75GHz,0.0
+cat__cpu_Custom 1.76GHz,0.0
+cat__cpu_Custom 1.77GHz,0.0
+cat__cpu_Custom 1.78GHz,0.0
+cat__cpu_Custom 1.79GHz,0.0
+cat__cpu_Custom 1.80GHz,0.0
+cat__cpu_Custom 1.81GHz,0.0
+cat__cpu_Custom 1.82GHz,0.0
+cat__cpu_Custom 1.83GHz,0.0
+cat__cpu_Custom 2.11GHz,0.0
+cat__cpu_Custom 2.14GHz,0.0
+cat__cpu_Custom 2.67GHz,0.0
+cat__cpu_Custom 2.42GHz,0.0
+cat__cpu_Custom 2.44GHz,0.0
+cat__cpu_Custom 2.45GHz,0.0
+cat__cpu_Custom 2.46GHz,0.0
+cat__cpu_Custom 2.47GHz,0.0
+cat__cpu_Custom 2.48GHz,0.0
+cat__cpu_Custom 2.49GHz,0.0
+cat__cpu_Custom 2.50GHz,0.0
+cat__cpu_Custom 2.51GHz,0.0
+cat__cpu_Custom 2.52GHz,0.0
+cat__cpu_Custom 2.53GHz,0.0
+cat__cpu_Custom 2.54GHz,0.0
+cat__cpu_Custom 2.55GHz,0.0
+cat__cpu_Custom 2.56GHz,0.0
+cat__cpu_Custom 2.57GHz,0.0
+cat__cpu_Custom 2.58GHz,0.0
+cat__cpu_Custom 2.59GHz,0.0
+cat__cpu_Custom 2.60GHz,0.0
+cat__cpu_Custom 2.61GHz,0.0
+cat__cpu_Custom 2.62GHz,0.0
+cat__cpu_Custom 2.63GHz,0.0
+cat__cpu_Custom 2.64GHz,0.0
+cat__cpu_Custom 2.65GHz,0.0
+cat__cpu_Custom 2.66GHz,0.0
+cat__cpu_Custom 2.43GHz,0.0
+cat__cpu_Custom 2.41GHz,0.0
+cat__cpu_Custom 2.15GHz,0.0
+cat__cpu_Custom 2.40GHz,0.0
+cat__cpu_Custom 2.16GHz,0.0
+cat__cpu_Custom 2.17GHz,0.0
+cat__cpu_Custom 2.18GHz,0.0
+cat__cpu_Custom 2.19GHz,0.0
+cat__cpu_Custom 2.21GHz,0.0
+cat__cpu_Custom 2.22GHz,0.0
+cat__cpu_Custom 2.23GHz,0.0
+cat__cpu_Custom 2.24GHz,0.0
+cat__cpu_Custom 2.25GHz,0.0
+cat__cpu_Custom 2.26GHz,0.0
+cat__cpu_Custom 2.27GHz,0.0
+cat__cpu_Custom 2.28GHz,0.0
+cat__cpu_Custom 2.29GHz,0.0
+cat__cpu_Custom 2.30GHz,0.0
+cat__cpu_Custom 2.31GHz,0.0
+cat__cpu_Custom 2.32GHz,0.0
+cat__cpu_Custom 2.33GHz,0.0
+cat__cpu_Custom 2.34GHz,0.0
+cat__cpu_Custom 2.35GHz,0.0
+cat__cpu_Custom 2.36GHz,0.0
+cat__cpu_Custom 2.37GHz,0.0
+cat__cpu_Custom 2.38GHz,0.0
+cat__cpu_Custom 2.39GHz,0.0
+cat__cpu_gpu_combo_Other_Other,0.0

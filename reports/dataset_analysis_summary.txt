@@ -1,0 +1,64 @@
+Dataset analysis report
+        ----------------------
+        Počet riadkov (spolu): 3192
+        Zdroje:
+  - primary: 917
+  - speed: 1000
+  - euro: 1275
+
+        Základné štatistiky cien (INR):
+        count      3192.000000
+mean      71354.251085
+std       65439.441481
+min        8000.000000
+25%       29117.500000
+50%       52000.000000
+75%       97320.000000
+90%      157410.000000
+max      599990.000000
+
+        Najčastejšie značky (top 10):
+        brand
+Lenovo     695
+HP         633
+Dell       598
+Asus       490
+Acer       375
+MSI        150
+Toshiba     48
+Apple       39
+Samsung     32
+Infinix     20
+
+        Podiel CPU vendorov:
+        cpu_vendor
+Other   56.9%
+Intel   40.6%
+AMD      1.9%
+Apple    0.6%
+
+        Podiel typov úložísk:
+        storage_type
+ssd       56.6%
+unknown   31.3%
+hdd       11.7%
+hybrid     0.3%
+other      0.1%
+
+Chýbajúce hodnoty (top 10):
+                    missing   percent
+rating                 2275  71.27193
+warranty_years         2275  71.27193
+cpu_physical_cores     2275  71.27193
+cpu_threads            2275  71.27193
+year                   2275  71.27193
+
+Generované grafy:
+  - price_distribution: reports/figures/price_distribution.png
+  - price_distribution_log10: reports/figures/price_distribution_log10.png
+  - price_by_brand: reports/figures/price_by_brand.png
+  - price_vs_ram: reports/figures/price_vs_ram.png
+  - numeric_correlation_heatmap: reports/figures/numeric_correlation_heatmap.png
+  - storage_type_counts: reports/figures/storage_type_counts.png
+  - records_by_source: reports/figures/records_by_source.png
+  - price_by_source: reports/figures/price_by_source.png
