@@ -51,6 +51,15 @@ Generované grafy sú uložené v `reports/figures/`:
 - Viac ako polovica záznamov má generické popisy CPU (`cpu_vendor = Other`), čo odôvodňuje doplňujúce engineered črty (`cpu_gen`, `cpu_gpu_combo`).
 - Podiel SSD výrazne prevyšuje HDD; vysoký počet `unknown` pochádza z numerického datasetu bez informácie o type úložiska – modely preto využívajú binárny príznak `storage_is_ssd`.
 
+4.3 Explainability (SHAP)
+---------------------------
+- Skript `python -m src.explainability` trénuje XGBoost na zlúčenom datasete (ten istý pipeline) a vyhodnocuje SHAP na vzorke 1 000 záznamov (background 500).
+- Artefakty sú v `reports/explainability/`:
+  - `shap_summary.png` – SHAP summary plot (top 25 čŕt po one-hot transformácii).
+  - `shap_feature_importance.csv` – tabuľka mean |SHAP| pre všetky transformované črty.
+  - `explainability_summary.txt` – agregované hodnoty podľa pôvodných stĺpcov.
+- Najvyššie príspevky: `storage_gb`, `screen_inches`, `cpu_gen`, `storage_is_ssd`, `ram_gb`, `rating`, `cpu_threads`, `cpu_physical_cores`. CPU črty (generácia, thready, jadrá) patria medzi top faktory → podporuje H₂. GPU kategórie majú zanedbateľný SHAP (väčšina syntetických dát neobsahuje detailné GPU), preto je ich prínos nízky.
+
 5. Feature engineering (`src/features.py`)
 ------------------------------------------
 - `cpu_vendor`: Intel, AMD, Apple, Qualcomm, inak `Other`.
@@ -108,21 +117,6 @@ Konfigurácia modelov dostupná cez `get_models(random_state=42)`:
 - Transformácia vstupov na ohe-onehot matice cez preprocesor.
 - SHAP analýza: `shap.TreeExplainer`, `shap.summary_plot` s uložením do `reports/figures/shap_summary.png`.
 - Graf ukazuje dôležitosť jednotlivých čŕt (vrátane OneHot stĺpcov) na výslednú cenu.
-
-4.4.4 Explainability (SHAP)
----------------------------
-- Skript `python -m src.explainability` trénuje XGBoost na zlúčenom datasete (ten istý pipeline) a vyhodnocuje SHAP na vzorke 1 000 záznamov (background 500).
-- Artefakty sú v `reports/explainability/`:
-  - `shap_summary.png` – SHAP summary plot (top 25 čŕt po one-hot transformácii).
-  - `shap_feature_importance.csv` – tabuľka mean |SHAP| pre všetky transformované črty.
-  - `explainability_summary.txt` – agregované hodnoty podľa pôvodných stĺpcov.
-- Najvyššie príspevky: `storage_gb`, `screen_inches`, `cpu_gen`, `storage_is_ssd`, `ram_gb`, `rating`, `cpu_threads`, `cpu_physical_cores`. CPU črty (generácia, thready, jadrá) patria medzi top faktory → podporuje H₂. GPU kategórie majú zanedbateľný SHAP (väčšina syntetických dát neobsahuje detailné GPU), preto je ich prínos nízky.
-
-4.5 Diskusia
-------------
-H₁ potvrdená: ML (XGB, RF) dosahujú nižšiu chybu než lineárne baseline (najmä v MAPE).
-H₂ podporená: SHAP analýza (`reports/explainability/`) ukazuje, že parametre CPU (`cpu_gen`, `cpu_threads`, `cpu_physical_cores`) patria medzi najvýznamnejšie črty; príspevok GPU je vzhľadom na dáta zanedbateľný (syntetický dataset neobsahuje detailné GPU kategórie).
-H₃ podporená: RF je v time-split robustnejší než XGB → technologický drift.
 
 12. Workflow a artefakty
 ------------------------
